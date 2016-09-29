@@ -1,0 +1,219 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol, ul {
+  list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #272727; }
+
+/* HEADER */
+.container {
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  margin-top: 137px;
+  margin-bottom: 30px;
+  margin-left: 78px;
+  padding-left: 150px;
+  width: 293px; }
+
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 5px; }
+
+.headline {
+  font-size: 1.5em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+/* END HEADER */
+/* RANKING */
+.ranking {
+  background: #FFFFFF;
+  margin-left: 40px;
+  border-radius: 3px;
+  width: 480px;
+  z-index: 1;
+  float: left; }
+
+.ranking li {
+  float: left;
+  width: 100%; }
+
+.ranking li:hover {
+  background-color: #BB3639; }
+
+.ranking li:hover .name {
+  color: #FFFFFF; }
+
+.ranking li:hover .avatar img {
+  -webkit-box-shadow: 0 0 0 5px #FFFFFF;
+  -moz-box-shadow: 0 0 0 5px #FFFFFF;
+  box-shadow: 0 0 0 5px #FFFFFF; }
+
+.ranking li:hover .description {
+  color: #000000; }
+
+.ranking .avatar {
+  float: left;
+  width: 100px;
+  padding: 15px;
+  padding-right: 0; }
+
+.ranking .info {
+  float: left;
+  padding: 15px;
+  padding-left: 0; }
+
+.avatar img {
+  overflow: auto;
+  width: 70px;
+  height: 70px;
+  float: left;
+  position: relative;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 5px #BB3639;
+  -moz-box-shadow: 0 0 0 5px #BB3639;
+  box-shadow: 0 0 0 5px #BB3639; }
+
+.avatar .position {
+  position: relative;
+  top: 55px;
+  left: 50px;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 0 1px #969495;
+  -moz-box-shadow: 0 0 0 1px #969495;
+  box-shadow: 0 0 0 1px #969495; }
+
+.avatar .position span {
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  left: 4px;
+  padding: 1px;
+  color: #969495;
+  font-weight: bold; }
+
+.ranking li:first-child span {
+  left: 6px; }
+
+.info .name {
+  font-size: 1.6em;
+  color: #BB3639;
+  margin-top: 10px;
+  margin-bottom: 5px; }
+
+.info .description {
+  color: #969495; }
+
+/* END RANKING */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  margin-right: 10px; }
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #FFFFFF;
+  color: #969495;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  top: 30px;
+  left: 103% !important;
+  z-index: 1;
+  display: table; }
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent white transparent transparent; }
+
+.tooltip .tooltiptext .positive, .tooltip .tooltiptext .negative {
+  display: table-cell; }
+
+.tooltip .tooltiptext .positive p, .tooltip .tooltiptext .negative p {
+  background: #BB3639;
+  white-space: nowrap;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  font-size: .7em; }
+
+.tooltip .tooltiptext .positive p {
+  border-top-left-radius: 6px; }
+
+.tooltip .tooltiptext .negative p {
+  border-top-right-radius: 6px; }
+
+.tooltip .tooltiptext .positive span, .tooltip .tooltiptext .negative span {
+  font-size: 1.5em;
+  float: left;
+  padding: 3px;
+  width: 100%;
+  text-align: center; }
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.ranking li:hover .tooltiptext {
+  visibility: visible; }
